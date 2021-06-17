@@ -1,1 +1,4 @@
-
+flask
+faiss
+imagehash
+Pillow
