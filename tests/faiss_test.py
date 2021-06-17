@@ -21,9 +21,9 @@ class TestMethods(TestCase):
                                                                                               DIMENSION = 64,
                                                                                               hashfunc = imagehash.phash)
 
-        similarImagesResult = check_faiss_similarity(hashArray, 
+        similarImagesResult = check_faiss_similarity(hashArray,
                            hashArrayToBeChecked,
-                           imageNames, 
+                           imageNames,
                            imageNamesToBeChecked,
                            index_method = "Flat",
                            metric = faiss.METRIC_L2,
@@ -31,8 +31,8 @@ class TestMethods(TestCase):
                            isIndexWritingEnabled = True,
                            isSeperateBatchSearchingEnabled = True,
                            batchSize = 5000,
-                           validImageExtensions = (".png", ".jpg", ".jpeg", ".tif", ".tiff", ".gif"), 
-                           SIMILARITY_THR = 0.40,  
+                           validImageExtensions = (".png", ".jpg", ".jpeg", ".tif", ".tiff", ".gif"),
+                           SIMILARITY_THR = 0.40,
                            NUMBER_OF_KNN = 1)
 
         normalizedDistanceFloat = similarImagesResult['MonaLisa_WikiImages'][1]
